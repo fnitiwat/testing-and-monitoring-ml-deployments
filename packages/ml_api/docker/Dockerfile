@@ -16,5 +16,7 @@ RUN apt-get update -y && \
 RUN pip install -r /opt/app/requirements/requirements.txt
 ENV PYTHONPATH "${PYTHONPATH}:/opt/app/"
 
+RUN pip install strictyaml==1.4.2
+
 ADD . /opt/app
 WORKDIR /opt/app
